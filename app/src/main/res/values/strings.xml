@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Quotes</string>
+    <string name="notify_quote_title">Your quote for today</string>
+    <string name="notify_quote_description">Just your quote</string>
+    <string name="theme_quote_example">I alone cannot change the world, but I can cast a stone across the water to create many ripples.</string>
+    <string name="theme_selected_message">New theme is selected</string>
+    <string name="permission_denied">The app can not manage this action without the permission</string>
+    <string name="theme_dialog_message">What do you want to do?</string>
+    <string name="share_error">The image can not be shared</string>
+    <string name="share_title">Share your theme</string>
+    <string name="quotes_picture_dir">Quotes</string>
+    <string name="ad_fail_to_get_reward">In order to unlock category you need to watch the ad till the end</string>
+    <string name="ad_fail_to_load">Failed to load ad</string>
+    <string name="dialog_share">Share</string>
+    <string name="dialog_save">Save image</string>
+    <string name="dialog_share_to_stories">Share to Instagram stories</string>
+    <string name="dialog_copy_text">Copy text</string>
+    <string name="dialog_set_wallpaper">Set wallpaper</string>
+    <string name="text_copied">Quote has been copied</string>
+    <string name="wallpaper_set">Wallpaper set</string>
+    <string name="settings">Settings</string>
+    <string name="favorites">Favorites</string>
+    <string name="background">Background pictures</string>
+    <string name="categories_header">Categories</string>
+    <string name="fonts_header">Fonts</string>
+    <string name="notify_header">Notifications</string>
+    <string name="notify_daily">Daily</string>
+    <string name="notify_never">Never</string>
+    <string name="notify_time">Time:</string>
+    <string name="history">History</string>
+
+    Onboarding
+    <string name="onboarding_quote_description">Get the power to get through a bad week and pursue your life`s dreams.</string>
+    <string name="onboarding_quote">The most common way people give up their power is by thinking they don’t have any</string>
+    <string name="onboarding_categories_title">What’s important for you?</string>
+    <string name="onboarding_notification_title">Set up notifications</string>
+    <string name="onboarding_premium_title">Get full access</string>
+    <string name="onboarding_premium_text_1">No ads</string>
+    <string name="onboarding_premium_text_2">Access to all topics</string>
+    <string name="onboarding_premium_text_3">Access to all categories</string>
+    <string name="onboarding_premium_text_4">No watermark</string>
+    <string name="onboarding_premium_period_year">12 month</string>
+    <string name="onboarding_premium_trial">7-day free trial</string>
+    <string name="onboarding_premium_period_month">1 month</string>
+    <string name="premium_price_per_week">%1$s/week</string>
+    <string name="premium_buy_success">Congratulation! You are premium now.</string>
+    <string name="premium_buy_error">Something went wrong, try later</string>
+
+    Firebase reports
+    <string name="unlike">Unlike quote</string>
+    <string name="like">Like quote</string>
+    <string name="category_selected">Category selected</string>
+    <string name="category_unselected">Category unselected</string>
+    <string name="select_theme">Theme selected</string>
+    <string name="quote_copied">Quote copied</string>
+    <string name="quote_shared_insta">Quote shared to instagram</string>
+    <string name="quote_set_wallpaper">Quote set as wallpaper</string>
+    <string name="quote_shared">Quote shared</string>
+    <string name="premium_free_version">Use free version</string>
+</resources>

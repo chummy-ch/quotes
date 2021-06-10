@@ -1,0 +1,3 @@
+json_key_file("quotes-google-play-service.json") 
+package_name("com.smartfoxlabs.daily.motivation.quotes.pictures.status.meditation") 
+

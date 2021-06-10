@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/history_button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:background="@android:color/transparent"
+    android:drawableLeft="@drawable/ic_history"
+    android:drawableRight="@drawable/ic_right_arrow"
+    android:gravity="center|left"
+    android:text="@string/history"
+    android:textAllCaps="false"
+    android:textColor="#000000"
+    android:textSize="18sp" />

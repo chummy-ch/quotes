@@ -1,0 +1,81 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:android)
+
+platform :android do
+ desc "My awesome app"
+    lane :distribute do
+        build_android_app(task: "bundle", build_type: "Release")
+        firebase_app_distribution(
+            testers: "chummy.tema@gmail.com, dwite.lol@gmail.com, valeriy.kuznetsovdev@gmail.com",
+            release_notes: "This is release",
+            android_artifact_type: "AAB",
+            debug: true,
+            android_artifact_path: "app/build/outputs/bundle/release/app-release.aab"
+        )
+    end
+    
+  desc "Runs all the tests"
+  lane :test do
+    gradle(task: "test")
+  end
+
+  desc "Submit a new Beta Build to Crashlytics Beta"
+  lane :beta do
+    gradle(task: "clean assembleRelease")
+    crashlytics
+  
+    # sh "your_script.sh"
+    # You can also use other beta testing services here
+  end
+
+  desc "Deploy a new version to the Google Play"
+  lane :deploy do
+  android_set_version_code(
+    gradle_file: "app/build.gradle" # optional
+  	)
+    build_android_app(task: "bundle", build_type: "Release")
+    versionCode = android_get_version_code(
+    gradle_file: "app/build.gradle" # optional
+  )
+    upload_to_play_store(
+    package_name: "com.smartfoxlabs.daily.motivation.quotes.pictures.status.meditation",
+    track: "production",
+    skip_upload_metadata: true,
+    version_code: versionCode,
+    skip_upload_apk: true
+    )
+    git_commit(path: "app/build.gradle", message: "Deploy app with the increased version code")
+
+    add_git_tag(
+  	tag: "Release-" + versionCode
+	)
+	push_git_tags
+	push_to_git_remote(
+ 	 remote: "origin",        
+  	 force: true,    # optional, default: false
+  	 force_with_lease: true,  # optional, default: false
+  	 tags: false,    # optional, default: true
+  	 no_verify: true,# optional, default: false
+  	 set_upstream: true        # optional, default: false
+	)
+  end
+  
+  desc "Github action dev"
+  lane :compile do 
+  	gradle(task: "assembleDebug")
+  	end
+end

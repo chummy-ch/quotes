@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:divider="@color/black"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <Button
+                android:id="@+id/share_button"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:height="60dp"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_share_dialog"
+                android:drawablePadding="6dp"
+                android:gravity="left|center"
+                android:padding="6dp"
+                android:text="@string/dialog_share"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:height="60dp"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_download"
+                android:drawablePadding="6dp"
+                android:gravity="left|center"
+                android:padding="6dp"
+                android:text="@string/dialog_save"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/share_stories_button"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:height="60dp"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_instagram"
+                android:drawablePadding="6dp"
+                android:gravity="left|center"
+                android:padding="6dp"
+                android:text="@string/dialog_share_to_stories"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/copy_text_button"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:height="60dp"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_copy"
+                android:drawablePadding="6dp"
+                android:gravity="left|center"
+                android:padding="6dp"
+                android:text="@string/dialog_copy_text"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/set_wallpaper_button"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:height="60dp"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_wallpaper"
+                android:drawablePadding="6dp"
+                android:gravity="left|center"
+                android:padding="6dp"
+                android:text="@string/dialog_set_wallpaper"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/disable_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="38dp"
+        android:background="@drawable/ic_disable" />
+
+</LinearLayout>
